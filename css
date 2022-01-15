@@ -1,0 +1,141 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+* {
+    box-sizing: border-box ;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(228, 241, 228);
+    color:black ;
+}
+.content{
+    top: 100px;
+    height: 900px;
+    width: 120vw;
+    margin: 50px auto;
+    justify-content: center;
+}
+.content h1{
+    margin: 0;
+}
+.content h3{
+    color: rgb(148, 5, 34);
+    font-style: italic;
+}
+.content p{
+    color: rgb(20, 4, 20);
+    line-height: 1.5;
+
+}
+.container{
+    background-image: linear-gradient(rgb(184, 238, 58),rgb(216, 196, 196), rgb(140, 197, 140));
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 60vw;
+    height: 850px;
+    padding: 20px;
+    margin: 0, 30px;
+
+}
+.container.show-nav {
+    animation:move2 1s ease-in;
+    animation-fill-mode: forwards;   
+}
+
+@keyframes move2 {
+0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform:rotate(-11deg);
+    }
+  }
+ .circle-container{
+    top: 14px;
+    bottom: -9px;
+    left: 0px;
+    position: fixed;
+} 
+ .circle{
+    background-color: whitesmoke; 
+    height: 42px;
+    left: 35px;
+    bottom: -25px;
+    width: 30px;
+    border-radius: 20%;
+    position:-ms-page;
+    transition: transform 0.5s linear;  
+} 
+.circle button{
+    height: 20px;
+    top: 0px;
+    width: 30px;
+    background: transparent; 
+    border:0;
+   
+    position:static;
+    display: flex;
+    cursor: pointer;
+}
+.circle button:focus{
+    outline: none;
+}
+.circle button#open{
+left: 60%;
+}
+.circle button#close{
+   top: 60px; 
+   transform: rotate(3deg);
+}
+.container2{
+    width: 1500px;
+    height: 500px;
+    margin:0;
+    background-image:url(./images/image7.jpeg); border-radius: 20px;
+    background-attachment:scroll;
+    background-position: center;
+    background-repeat:no-repeat; 
+    position: relative;
+    animation: move 25s infinite;
+}
+@keyframes move{
+    0% {background-image: url(./images/image1.jpeg);}
+10% {background-image: url(./images/image2.jpeg);}
+20% {background-image: url(./images/image3.jpeg);}
+30% {background-image: url(./images/image4.jpeg);}
+40% {background-image: url(./images/image5.jpeg);}
+50% {background-image: url(./images/image6.jpeg);}
+60% {background-image: url(./images/image8.jpeg);}
+70% {background-image: url(./images/image9.jpeg);}
+80% {background-image: url(./images/image10.jpeg);}
+90% {background-image: url(./images/image11.jpeg);}
+100% {background-image: url(./images/image12.jpeg);}
+}
+.nav{
+   position: fixed;
+   top: 510px;
+   bottom: 0; 
+   font-size: 20px;
+   margin-left: -6px;
+   line-height: 180%;
+}
+nav ul{
+    list-style-type:none;
+    padding-left: 20px;
+}
+nav ul li{
+    text-transform: capitalize;
+    color: darkred;
+    margin: 40px, 0;
+    transform: translateX(-140px);
+    animation: bigger 1.5s linear; 
+}
+nav ul li +li{
+    margin-left: 9px;
+}
+nav ul li +li +li{
+    margin-left: 18px;
+}
+ 
